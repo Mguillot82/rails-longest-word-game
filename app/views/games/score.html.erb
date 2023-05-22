@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Welcome to the longest word-game!</h1>
+  <div class="card">
+    <div>Here is your grid:</div>
+    <ul>
+        <% @letters.each do |letter| %>
+          <li class="card-letter"><%= letter %></li>
+        <% end %>
+      </ul>
+  </div>
+  <div class="card">
+    <hr>
+    <ul>
+        <li></li>
+        <li></li>
+        <li>Word: </li>
+        <li><%= @user_guess%></li>
+        <li></li>
+        <li></li>
+        <li>Time:</li>
+        <li><%= @time_taken.to_i%> seconds</li>
+        <li></li>
+        <li></li>
+    </ul>
+    <p>Score: <%= @user_score %></p>
+    <p id="announcement"><%= @message%></p>
+  </div>
+  <a><%= link_to "Play again", "new" %></a>
+</div>
